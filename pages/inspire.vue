@@ -1,5 +1,7 @@
 <template>
   <v-row>
+    <usuario />
+    <registro />
     <v-col class="text-center">
       <img
         src="/v.png"
