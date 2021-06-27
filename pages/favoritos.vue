@@ -39,6 +39,7 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 export default {
+  middleware: 'permissoes',
   data () {
     return {
       paises: [
