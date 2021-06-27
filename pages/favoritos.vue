@@ -1,13 +1,13 @@
 <template>
   <div>
-    <h1>Países</h1>
+    <h1>Países Favoritos {{ totalFavoritos }}</h1>
     <ul>
-      <li v-for="pais in paises" :key="pais.id">
+      <li v-for="pais in favoritos" :key="pais.id">
         <nuxt-link :to="'paises/' + pais.id">
           {{ pais.nome }}
         </nuxt-link>
-        <v-btn depressed color="primary" @click="adicionarFavorito(pais)">
-          Add favorito
+        <v-btn depressed color="error" @click="deletarFavorito(pais.id)">
+          Delete favorito
         </v-btn>
       </li>
     </ul>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 export default {
   data () {
     return {
@@ -27,8 +27,11 @@ export default {
       ]
     }
   },
+  computed: {
+    ...mapGetters('paises', ['favoritos', 'totalFavoritos'])
+  },
   methods: {
-    ...mapActions('paises', ['adicionarFavorito'])
+    ...mapActions('paises', ['adicionarFavorito', 'deletarFavorito'])
   }
 }
 </script>
