@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Países Favoritos {{ totalFavoritos }}</h1>
+    <client-only>
+      <vue-typer text="Países Favoritos" />
+    </client-only>
     <ul>
       <li v-for="pais in favoritos" :key="pais.id">
         <nuxt-link :to="'paises/' + pais.id">
@@ -11,6 +13,26 @@
         </v-btn>
       </li>
     </ul>
+    <carousel :autoplay="true" :per-page="1">
+      <slide>
+        <v-img
+          contain
+          lazy-src="https://picsum.photos/id/11/10/6"
+          max-height="300"
+          max-width="500"
+          src="https://picsum.photos/id/11/500/300"
+        />
+      </slide>
+      <slide>
+        <v-img
+          contain
+          lazy-src="https://picsum.photos/id/11/10/6"
+          max-height="300"
+          max-width="500"
+          src="https://picsum.photos/id/11/500/300"
+        />
+      </slide>
+    </carousel>
   </div>
 </template>
 
