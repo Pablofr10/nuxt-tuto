@@ -1,20 +1,28 @@
-# nuxt-tuto
+# Tutorial NuxtJS 
+Tutorial de NuxtJS dispoível no canal do Youtube [Pablo Codes](https://www.youtube.com/watch?v=CZ6Qbn80h4k&list=PLxd1RHU8YgYnE1xzz3A85xw2yLDw0Kyx-&ab_channel=PabloCodes)
+
+
+
+## Playlist
+
+- Conhecendo o framework
+- Instalação, configuração e estrutura
+- Componentes
+- Pages (configurações, páginas dinâmicas etc)
+- Layouts
+- Store (Vuex, namespaces etc)
+- Plugins
+- Middleware
+- MetaTags e SEO (Todas as metatags que o Google entende e configurando global, local)
 
 ## Build Setup
 
 ```bash
-# install dependencies
+# instalando dependencias
 $ npm install
 
-# serve with hot reload at localhost:3000
+# serve com hot reload at localhost:3000
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
